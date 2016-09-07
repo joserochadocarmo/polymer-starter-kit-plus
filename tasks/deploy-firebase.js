@@ -9,9 +9,9 @@ module.exports = function ($, config, gulp, environment) {
   if (environment === 'promote') {
     console.log('Firebase don\'t support promote');
     return;
+  } else if(environment==='development'){
+    return gulp.src('').pipe($.shell('firebase serve '));
   } else {
-    subdomain = config.deploy.firebase.env[environment];
+    return gulp.src('').pipe($.shell('firebase deploy '));
   }
-
-  return gulp.src('').pipe($.shell('firebase deploy -f ' + subdomain));
 };

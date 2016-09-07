@@ -44,7 +44,7 @@ module.exports = {
   // Deploy task
   deploy: {
     // Choose hosting
-    hosting: 'gae', // or firebase, gcs, ssh
+    hosting: 'firebase', // or firebase, gcs, ssh
     // Firebase
     // Firebase requires Firebase Command Line Tools to be installed and configured.
     // For info on tool: https://www.firebase.com/docs/hosting/command-line-tool.html
